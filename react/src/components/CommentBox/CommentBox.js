@@ -37,7 +37,6 @@ var CommentBox = React.createClass({
       dataType: 'json',
       cache: false,
       success: function (data) {
-        //console.log(data);
         this.setState({data: data});
       }.bind(this),
       error: function (xhr, status, err) {
