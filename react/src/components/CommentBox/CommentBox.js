@@ -46,11 +46,8 @@ var CommentBox = React.createClass({
     });
   },
   handleCommentSubmit: function (comment) {
-    //console.log(comment);
     var comments = this.state.data;
-    //console.log(comments);
     var newComments = comments.concat([comment]);
-    //console.log(newComments);
     this.setState({data: newComments});
     $.ajax({
       url: this.props.url,

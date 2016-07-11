@@ -24,12 +24,6 @@ var CommentList = React.createClass({
 
   render: function () {
     var commentNodes = this.props.data.map(function (comment) {
-
-
-//console.log(comment);
-//console.log(JSON.parse(comment));
-
-
       var timeago = '';
       if ((typeof comment.timestamp !== 'undefined') && (comment.timestamp !== '')){
         var timeStamp = comment.timestamp;
