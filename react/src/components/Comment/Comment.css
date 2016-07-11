@@ -1,3 +1,5 @@
-.Comment {
+.comment {
   border: 1px dashed #f00;
+  margin: 10px;
+  padding: 10px;
 }

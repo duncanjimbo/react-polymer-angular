@@ -1,3 +1,6 @@
-.CommentList {
+/*.commentList {
   border: 1px dashed #f00;
+}*/
+.commentList span {
+  display: block;
 }

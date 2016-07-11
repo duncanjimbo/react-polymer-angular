@@ -28,10 +28,12 @@ var CommentForm = React.createClass({
     e.preventDefault();
     var author = React.findDOMNode(this.refs.author).value.trim();
     var msg = React.findDOMNode(this.refs.msg).value.trim();
+    var timestamp = Math.floor(Date.now() / 1000);
+
     if (!msg || !author) {
       return;
     }
-    this.props.onCommentSubmit({author: author, msg: msg});
+    this.props.onCommentSubmit({author: author, msg: msg, timestamp: timestamp});
     React.findDOMNode(this.refs.author).value = '';
     React.findDOMNode(this.refs.msg).value = '';
     return;

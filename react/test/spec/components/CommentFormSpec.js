@@ -24,8 +24,9 @@ describe('CommentForm', function () {
     var form = TestUtils.findRenderedDOMComponentWithTag(root, 'form');
     root.refs.author.getDOMNode().value = 'Santiago';
     root.refs.msg.getDOMNode().value = 'Msg 1';
+    var nowStamp = Math.floor(Date.now() / 1000);
     TestUtils.Simulate.submit(form);
-    expect(CommentBox.handleCommentSubmit).toHaveBeenCalledWith({ author: 'Santiago', msg: 'Msg 1'});
+    expect(CommentBox.handleCommentSubmit).toHaveBeenCalledWith({ author: 'Santiago', msg: 'Msg 1', timestamp: nowStamp});
   });
 
   it('should not submit the form if msg or author fileds are empty', function (){
