@@ -31,7 +31,7 @@ var CommentList = React.createClass({
         var units = [
           {name: "minute", limit: 3600, in_seconds: 60},
           {name: "hour", limit: 86400, in_seconds: 3600},
-          {name: "day", limit: 604800, in_seconds: 86400}
+          {name: "day", limit: null, in_seconds: 86400}
         ];
         var diff = (nowStamp - timeStamp);
 
